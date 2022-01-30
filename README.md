@@ -66,3 +66,25 @@ Youtube link - [here!](https://youtu.be/mrHNSanmqQ4)
   - add route("/review") [post, put, delete]
 - Create [backend/api/reviews.controller.js](backend/api/reviews.controller.js)
 - Create [backend/dao/reviewsDAO.js](backend/dao/reviewsDAO.js)
+
+## Restaurants Frontend
+
+- Update
+  - [backend/api/restaurants.route.js](backend/api/restaurants.route.js)
+  - [backend/dao/restaurantsDAO.js](backend/dao/restaurantsDAO.js)
+  - [backend/api/restaurants.controller.js](backend/api/restaurants.controller.js)
+- Initial frontend
+
+  ```bash
+  # create/initial react in new folder called frontend
+  npx create-react-app frontend
+
+  npm install bootstrap
+  npm install react-router-dom
+
+  # in frontend folder
+  # run server
+  npm start
+  ```
+  
+- Update [frontend](frontend)
