@@ -8,10 +8,10 @@ Also, learn how to use MongoDB Realm to convert the backend to serverless and ho
 
 Youtube link - [here!](https://youtu.be/mrHNSanmqQ4)
 
-## Set up
+## Setup
 
-- Set up MongoDB Cluster0 with sample data loaded
-- Set up project folder
+- Create MongoDB Cluster0 with sample data loaded
+- Create project folder
 - Initial node in backend folder
 
   ```bash
@@ -39,3 +39,22 @@ Youtube link - [here!](https://youtu.be/mrHNSanmqQ4)
   # in backend folder
   nodemon server
   ```
+
+## Connect Database
+
+- Create [backend/dao/restaurantsDAO.js](backend/dao/restaurantsDAO.js)
+- Update [backend/index.js](backend/index.js)
+  - add import RestaurantsDAO from "./dao/restaurantsDAO.js"
+  - add await RestaurantsDAO.injectDB(client)
+- Update [backend/api/restaurants.route.js](backend/api/restaurants.route.js)
+  - add import RestaurantsCtrl from "./restaurants.controller.js"
+  - replace router.route("/") to get RestaurantsCtrl.apiGetRestaurants
+- Create [backend/api/restaurants.controller.js](backend/api/restaurants.controller.js)
+
+## Add new index to MongoDB database
+
+- Open Cluster > Collection > select database (sample_restaurants.restaurants)
+- Click Indexes (toolbar)
+- Click create index (top-right green btn)
+- replace Fields to `{"name": "text"}` (we wanna add fields "name" for api filter)
+- click confirm
