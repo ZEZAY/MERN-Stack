@@ -81,10 +81,13 @@ Youtube link - [here!](https://youtu.be/mrHNSanmqQ4)
 
   npm install bootstrap
   npm install react-router-dom
+  npm install axios
 
   # in frontend folder
   # run server
   npm start
+  # build
+  npm run build
   ```
-  
+
 - Update [frontend](frontend)
