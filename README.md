@@ -51,10 +51,18 @@ Youtube link - [here!](https://youtu.be/mrHNSanmqQ4)
   - replace router.route("/") to get RestaurantsCtrl.apiGetRestaurants
 - Create [backend/api/restaurants.controller.js](backend/api/restaurants.controller.js)
 
-## Add new index to MongoDB database
+## Add new Index to MongoDB database
 
 - Open Cluster > Collection > select database (sample_restaurants.restaurants)
 - Click Indexes (toolbar)
 - Click create index (top-right green btn)
 - replace Fields to `{"name": "text"}` (we wanna add fields "name" for api filter)
 - click confirm
+
+## Review Feature
+
+- Update [backend/api/restaurants.route.js](backend/api/restaurants.route.js)
+  - add import ReviewsCtrl from "./reviews.controller.js"
+  - add route("/review") [post, put, delete]
+- Create [backend/api/reviews.controller.js](backend/api/reviews.controller.js)
+- Create [backend/dao/reviewsDAO.js](backend/dao/reviewsDAO.js)
